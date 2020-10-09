@@ -11,9 +11,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.gmrit.food4all.R;
 import com.gmrit.food4all.utilities.ConstantValues;
 import com.google.android.gms.ads.AdRequest;
@@ -35,6 +37,7 @@ public class DonationCount extends AppCompatActivity {
 
     private DatabaseReference myref;
     private EditText edtphone;
+    private ImageView doncountPic;
     private Button btnsubmit;
     private String phone;
     boolean connected = false;
@@ -45,6 +48,10 @@ public class DonationCount extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_donation_count);
         ConstantValues.internetCheck(DonationCount.this);
+
+        doncountPic = (ImageView) findViewById(R.id.donCountPic);
+
+        Glide.with(this).load(R.drawable.doncount).into(doncountPic);
 
         ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         //we are connected to a network

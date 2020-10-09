@@ -13,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,8 +26,10 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.bumptech.glide.Glide;
 import com.gmrit.food4all.R;
 import com.gmrit.food4all.modals.Fooddetails;
+import com.gmrit.food4all.modals.Image;
 import com.gmrit.food4all.utilities.ConstantValues;
 import com.gmrit.food4all.utilities.Dialog;
 import com.google.firebase.FirebaseException;
@@ -53,6 +56,7 @@ public class FoodDetailsActivity extends AppCompatActivity implements AdapterVie
     public Button submit;
     private FirebaseAuth firebaseAuth;
     private TextView userEmail;
+    private ImageView foodDetailsPic;
     DatabaseReference reff;
     DatabaseReference ref;
     EditText edtnam, edtphone, spin, edtadd, edtfoodcanfeed;
@@ -75,6 +79,8 @@ public class FoodDetailsActivity extends AppCompatActivity implements AdapterVie
         setContentView(R.layout.activity_food__details);
         firebaseAuth = FirebaseAuth.getInstance();
 
+        foodDetailsPic = (ImageView) findViewById(R.id.foodDetailsPic);
+
         edtnam = (EditText) findViewById(R.id.fooddonname);
         edtphone = (EditText) findViewById(R.id.fooddonphone);
         edtadd = (EditText) findViewById(R.id.fooddonadd);
@@ -90,7 +96,7 @@ public class FoodDetailsActivity extends AppCompatActivity implements AdapterVie
             getSupportActionBar().setTitle("Donate Food");
         }
 
-
+        Glide.with(this).load(R.drawable.smiling).into(foodDetailsPic);
         ref = (DatabaseReference) FirebaseDatabase.getInstance().getReference("Volunteers");
 
         reff = FirebaseDatabase.getInstance().getReference().child("Food_Details");

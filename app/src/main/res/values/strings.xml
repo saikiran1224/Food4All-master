@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Food 4 All</string>
+    <string name="app_name">Bhojan for All</string>
     <string name="title_activity_regvolunteer">regvolunteer</string>
     <string name="gallery">Gallery</string>
 
@@ -28,7 +28,7 @@
     <string name="forgot_password">Forgot Password ?</string>
     <string name="default_notification_channel_id">admin_channel</string>
     <string name="contact_us">Contact Us</string>
-    <string name="_17341a1236_gmrit_edu_in">riyafoundationfood4all@gmail.com</string>
+    <string name="_17341a1236_gmrit_edu_in">umangsolutions2020@gmail.com</string>
     <string name="_91_63031_49161">+91 63031 49161</string>
     <string name="department_of_information_technology">Department of Information Technology</string>
     <string name="gmr_institute_of_technology">GMR Institute of Technology \n Andhra Pradesh, India</string>
@@ -154,7 +154,6 @@
     <string-array name="occasion">
         <item>Select Occasion</item>
         <item>Birthday</item>
-        <item>Bridal Shower</item>
         <item>Graduation</item>
         <item>New Baby</item>
         <item>Retirement</item>

@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
         Toolbar toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle("Food 4 All");
+        toolbar.setTitle("Bhojan for All");
 
 
         drawer = findViewById(R.id.drawer_layout);

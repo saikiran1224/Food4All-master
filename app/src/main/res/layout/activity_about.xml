@@ -21,12 +21,13 @@
 
 
             <ImageView
+                android:id="@+id/aboutLogo"
                 android:layout_width="match_parent"
                 android:layout_height="190dp"
+                android:scaleType="centerCrop"
                 android:layout_gravity="center"
                 android:contentDescription="@string/app_name"
-                android:padding="10dp"
-                android:src="@drawable/appicc" />
+                android:padding="10dp" />
 
             <TextView
                 android:layout_width="wrap_content"

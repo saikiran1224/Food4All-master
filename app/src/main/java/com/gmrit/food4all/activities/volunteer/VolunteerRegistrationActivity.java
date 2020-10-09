@@ -137,7 +137,7 @@ public class VolunteerRegistrationActivity extends AppCompatActivity {
                         NotificationCompat.Builder builder = new NotificationCompat.Builder(
                                 VolunteerRegistrationActivity.this
                         )
-                                .setSmallIcon(R.drawable.log)
+                                .setSmallIcon(R.drawable.logotrans)
                                 .setContentTitle("Thank You for Registering !")
                                 .setContentText(msg)
                                 .setAutoCancel(true)
